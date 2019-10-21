@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '12'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+
+    //for executable jar with jsp
+    implementation("javax.servlet:jstl")
+    implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
+}
+
+test {
+    useJUnitPlatform()
+}
